@@ -11,10 +11,20 @@
         </li>
       </ul>
       <p appBasicHighLight>fgbfgbfgbfgbfgbfgbfgbfgb</p>
-      <p appBetterHighlight [defaultColor]="'yellow'" [highColor]="'red'">fgbfgbfgbfgbfgbfgbfgbfgb</p>
+      <p appBetterHighlight [defaultColor]="'yellow'" [highColor]="'red'">
+        fgbfgbfgbfgbfgbfgbfgbfgb
+      </p>
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
+      <!-- ng switch -->
+      <span [ngSwitch]="value">
+        <p *ngSwitchCase="5">value is 5</p>
+        <p *ngSwitchCase="10">value is 10</p>
+        <p *ngSwitchCase="400">value is 400</p>
+        <p *ngSwitchCase="777">value is 777</p>
+        <p *ngSwitchDefault>default</p>
+      </span>
     </div>
   </div>
 </div>
